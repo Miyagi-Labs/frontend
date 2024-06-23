@@ -3,7 +3,7 @@ import "./HomePage.css"
 import axios from "axios"
 
 import { Link } from "react-router-dom"
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import FileUpload from "../../component/FileUpload/FileUpload"
 
 import Tab from "react-bootstrap/Tab"
@@ -13,9 +13,20 @@ import { Icon } from "@iconify/react"
 // Your component code
 
 const HomePage = () => {
+  const fileInputRef = useRef(null)
+  const fileInputRef2 = useRef(null)
+
+  const resetFileInput = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ""
+    }
+    if (fileInputRef2.current) {
+      fileInputRef.current.value = ""
+    }
+  }
   const handleFileChange = async (event, type) => {
-    console.log("🚀 ~ handleFileChange ~ event:", event)
     await handleFileUpload(event.target.files[0], type)
+    resetFileInput()
   }
   const handleFileChangeVerify = async (event) => {
     await handleFileUpload(event.target.files[0], "verify")
@@ -94,7 +105,11 @@ const HomePage = () => {
               <div className="box-content">
                 <Image src="Images/homepage/drag.svg" />
                 <h5>Drag & Drop</h5>
-                <input type="file" onChange={handleFileChange} />
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  onChange={handleFileChange}
+                />
               </div>
             </div>
           </li>
