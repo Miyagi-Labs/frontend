@@ -17,7 +17,8 @@
 }
 
 .downbutton {
-  background-color: #04AA6D; /* Green */
+  background-color: #04AA6D;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -65,6 +66,7 @@
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 #delete:hover,
 #delete:focus .close:focus {
@@ -234,8 +236,8 @@
   margin-top: 39px;
 }
 
-.selecttemplete .card-group > .card:not(:last-child),
-.selecttemplete .card-group > .card:not(:first-child) {
+.selecttemplete .card-group>.card:not(:last-child),
+.selecttemplete .card-group>.card:not(:first-child) {
   border-top-right-radius: initial !important;
   border-bottom-right-radius: initial !important;
   border-radius: 20px !important;
@@ -302,7 +304,7 @@
   margin-bottom: 11px;
 }
 
-.templetemodal .modaltitle + a {
+.templetemodal .modaltitle+a {
   background: #2184e5;
   color: white;
   width: 170px;
@@ -745,7 +747,7 @@ input.activity::placeholder {
   justify-content: space-between;
 }
 
-div#button-1 input:checked + .knobs {
+div#button-1 input:checked+.knobs {
   background: #2184e5;
 }
 
@@ -900,14 +902,14 @@ textarea.message::placeholder {
   z-index: 1;
 }
 
-#button-1 .checkbox:checked + .knobs:before {
+#button-1 .checkbox:checked+.knobs:before {
   content: "";
   right: 2px;
   left: auto;
   background-color: #ffffff;
 }
 
-#button-1 .checkbox:checked ~ .layer {
+#button-1 .checkbox:checked~.layer {
   background-color: #fcebeb;
 }
 
@@ -926,7 +928,7 @@ textarea.message::placeholder {
   left: 0;
 }
 
-div#button-1 input:checked + .knobs {
+div#button-1 input:checked+.knobs {
   background: #2184e5;
 }
 
@@ -1024,7 +1026,7 @@ ul.usertempl li {
   position: absolute;
 }
 
-ul.usertempl li input:checked + .userinvite:after {
+ul.usertempl li input:checked+.userinvite:after {
   content: "✓";
 }
 
@@ -1045,7 +1047,7 @@ ul.usertempl li {
   max-width: 230px;
 }
 
-ul.usertempl + a {
+ul.usertempl+a {
   background: #2184e5;
   color: white;
   width: 170px;
